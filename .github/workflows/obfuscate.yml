@@ -29,7 +29,7 @@ jobs:
       - name: install pyarmor
         run: pip3 install pyarmor
 
-       - name: copy files into the directory
+      - name: copy files into the directory
         run: |
           cp /app/config.json /dist/app/.
           cp README.md /dist/.
