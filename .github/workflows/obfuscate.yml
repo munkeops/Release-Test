@@ -31,8 +31,8 @@ jobs:
 
       - name: copy files into the directory
         run: |
-          cp /app/config.json /dist/app/.
-          cp README.md /dist/.
+          cp app/config.json dist/app/.
+          cp README.md dist/.
         
       # obfuscate
       - name: Obfuscate-code
