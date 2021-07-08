@@ -29,16 +29,17 @@ jobs:
       - name: install pyarmor
         run: pip3 install pyarmor
 
-      - name: copy files into the directory
-        run: |
-          cp app/config.json dist/app/
-          cp README.md dist/
         
       # obfuscate
       - name: Obfuscate-code
         run: pyarmor obfuscate --recursive run.py
+
+      - name: copy files into the directory
+        run: |
+          cp app/config.json dist/app/
+          cp README.md dist/
       
-      - name: Create Release
+      - name: Push to branch
         uses: crazy-max/ghaction-github-pages@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
