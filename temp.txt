@@ -1,1 +1,5 @@
+<<<<<<< test
 updating this line to a new line 
+=======
+small change
+>>>>>>> main
